@@ -2,10 +2,12 @@ clone_files(
   'app/**/**'
 )
 
+mkdirs 'app/stylesheets/layouts/application/contents'
+
 with_file 'Gemfile' do |file|
-  file << "gem 'sass'"
-  file << "gem 'haml'"
-  file << "gem 'jsus'"
+  file << "\ngem 'sass'"
+  file << "\ngem 'haml'"
+  file << "\ngem 'jsus'"
 end
 
 with_file "config/environment.rb" do |file|
